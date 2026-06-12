@@ -5,9 +5,9 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3&height=250&text=Kerrigan's%20Necklace&fontSize=60&fontAlignY=35&desc=General-Purpose%20LaTeX%20%26%20Marp%20Typesetting%20Carrier&descAlignY=55&fontColor=ffffff" width="100%" alt="Hero Image" />
 <!-- readme-gen:end:hero -->
 
-# Kerrigan's TeX-Marp Necklace / 鍑憺鐢樼殑 TeX-Marp 椤归摼
+# Kerrigan's TeX-Marp Necklace / 凯瑞甘的 TeX-Marp 项链
 
-**閫氱敤 LaTeX / Marp 鎺掔増琛ㄨ揪杞戒綋 Skill**
+**通用 LaTeX / Marp 排版表达载体 Skill**
 <br/>
 *General-Purpose LaTeX & Marp Typesetting Expression Carrier*
 
@@ -23,72 +23,76 @@
 
 ---
 
-> **"This is just a necklace." / 銆岃繖鍙槸鏉￠」閾俱€傘€?*
+> **"This is just a necklace." / 「这只是条项链。」**
 >
-> She solves the tedious typesetting problems of your outward expression 鈥?but she cannot replace the real strength of your content. The necklace makes you look good; the body beneath is still yours to build.
+> She solves the tedious typesetting problems of your outward expression — but she cannot replace the real strength of your content. The necklace makes you look good; the body beneath is still yours to build.
 >
-> 濂硅В鍐充簡浣犲澶栬〃杈炬椂鐨勭箒鐞愭帓鐗堥棶棰樷€斺€斾絾涓嶈兘鏇夸唬鏈綋鐨勭湡瀹炲唴瀹瑰疄鍔涖€傞」閾捐浣犵湅璧锋潵寰楀疁锛涢」閾句笅鐨勬湰浣擄紝浠嶇敱浣犺嚜宸辨瀯绛戙€?
+> 她解决了你对外表达时的繁琐排版问题——但不能替代本体的真实内容实力。项链让你看起来得宜；项链下的本体，仍由你自己构筑。
+
 ---
 
-## What Is This? / 杩欐槸浠€涔堬紵
+## What Is This? / 这是什么？
 
 `acp-traetune-kerrigan-s-tex-marp-necklace` is a **TRAE Skill** that wraps the complete LaTeX / Marp typesetting engineering pipeline into a reusable, rule-driven carrier. It handles:
 
 - **From-scratch authoring** of academic papers (LaTeX) and presentation slides (Marp)
 - **Incremental modification** of existing documents with format safety guards
-- **Format fault diagnosis and repair** 鈥?overflow, misalignment, table width, TikZ overlap, legend intrusion, and 28+ registered problem types
-- **Environment preflight** 鈥?one-shot environment validation for toolchain dependencies
+- **Format fault diagnosis and repair** — overflow, misalignment, table width, TikZ overlap, legend intrusion, and 28+ registered problem types
+- **Environment preflight** — one-shot environment validation for toolchain dependencies
 - **Bilingual writing support** (Chinese / English) with built-in best practices
-- **Format guard gate** 鈥?an automated validation script (`format_guard.py`) that produces machine-readable JSON evidence and hard-blocks on errors
+- **Format guard gate** — an automated validation script (`format_guard.py`) that produces machine-readable JSON evidence and hard-blocks on errors
 
-`acp-traetune-kerrigan-s-tex-marp-necklace` 鏄竴涓?**TRAE Skill**锛屽皢 LaTeX / Marp 鎺掔増宸ョ▼鍏ㄩ摼璺皝瑁呬负鍙鐢ㄧ殑瑙勫垯椹卞姩杞戒綋銆傝鐩栵細
+`acp-traetune-kerrigan-s-tex-marp-necklace` 是一个 **TRAE Skill**，将 LaTeX / Marp 排版工程全链路封装为可复用的规则驱动载体。覆盖：
 
-- **浠庨浂鎾板啓**瀛︽湳璁烘枃锛圠aTeX锛変笌婕旂ず骞荤伅鐗囷紙Marp锛?- **澧為噺淇敼**宸叉湁鏂囨。锛屽甫鏍煎紡瀹夊叏鎶ゆ爮
-- **鏍煎紡鏁呴殰璇婃柇涓庝慨澶?*鈥斺€旀孩鍑恒€佹湭灞呬腑銆佽〃鏍艰繃瀹姐€乀ikZ 閲嶅彔銆佸浘渚嬩镜鍏ョ瓑 28+ 娉ㄥ唽闂绫诲瀷
-- **鐜棰勬**鈥斺€斾竴娆℃€ч獙璇佸伐鍏烽摼渚濊禆
-- **鍙岃鍐欎綔鏀寔**锛堜腑/鑻憋級锛屽唴寤烘渶浣冲疄璺?- **鏍煎紡鏍￠獙闂搁棬**鈥斺€擿format_guard.py` 鑷姩浜у嚭鏈哄櫒鍙 JSON 璇佹嵁锛岄亣 hard error 纭樆鏂?
+- **从零撰写**学术论文（LaTeX）与演示幻灯片（Marp）
+- **增量修改**已有文档，带格式安全护栏
+- **格式故障诊断与修复**——溢出、未居中、表格过宽、TikZ 重叠、图例侵入等 28+ 注册问题类型
+- **环境预检**——一次性验证工具链依赖
+- **双语写作支持**（中/英），内建最佳实践
+- **格式校验闸门**——`format_guard.py` 自动产出机器可读 JSON 证据，遇 hard error 硬阻断
+
 ---
 
-## Architecture / 鏋舵瀯
+## Architecture / 架构
 
 <!-- readme-gen:start:architecture -->
 
 ```mermaid
 flowchart TD
-    U["User Input / 鐢ㄦ埛杈撳叆"] --> R{Carrier Type? / 杞戒綋绫诲瀷?}
+    U["User Input / 用户输入"] --> R{Carrier Type? / 载体类型?}
     
-    R -->|LaTeX| LA["LaTeX Router / LaTeX 璺敱"]
-    R -->|Marp| MA["Marp Router / Marp 璺敱"]
+    R -->|LaTeX| LA["LaTeX Router / LaTeX 路由"]
+    R -->|Marp| MA["Marp Router / Marp 路由"]
     
-    LA --> A["Path A: From Scratch<br/>璺緞A: 浠庨浂鎾板啓"]
-    LA --> B["Path B: Modify<br/>璺緞B: 澧為噺淇敼"]
-    LA --> C["Path C: Fix<br/>璺緞C: 鏍煎紡淇"]
-    LA --> D["Path D: Govern<br/>璺緞D: 缁撴瀯娌荤悊"]
+    LA --> A["Path A: From Scratch<br/>路径A: 从零撰写"]
+    LA --> B["Path B: Modify<br/>路径B: 增量修改"]
+    LA --> C["Path C: Fix<br/>路径C: 格式修复"]
+    LA --> D["Path D: Govern<br/>路径D: 结构治理"]
     
-    MA --> E["Path E: From Scratch<br/>璺緞E: 浠庨浂鎾板啓"]
-    MA --> F["Path F: Modify<br/>璺緞F: 澧為噺淇敼"]
-    MA --> G["Path G: Fix<br/>璺緞G: 鏍煎紡淇"]
-    MA --> H["Path H: Govern<br/>璺緞H: 缁撴瀯娌荤悊"]
+    MA --> E["Path E: From Scratch<br/>路径E: 从零撰写"]
+    MA --> F["Path F: Modify<br/>路径F: 增量修改"]
+    MA --> G["Path G: Fix<br/>路径G: 格式修复"]
+    MA --> H["Path H: Govern<br/>路径H: 结构治理"]
     
-    A --> PRE["Preflight / 鐜棰勬"]
+    A --> PRE["Preflight / 环境预检"]
     E --> PRE
     
-    A --> REF["References / 鍙傝€冩枃妗?br/>guides + FAQs + capability maps"]
+    A --> REF["References / 参考文档<br/>guides + FAQs + capability maps"]
     B --> REF
     C --> REF
     E --> REF
     F --> REF
     G --> REF
     
-    REF --> EXEC["Execute / 鎵ц"]
-    EXEC --> COMPILE["Compile / Export<br/>缂栬瘧/瀵煎嚭"]
-    COMPILE --> GATE["馃殾 Format Guard Gate<br/>鏍煎紡鏍￠獙闂搁棬<br/>format_guard.py"]
+    REF --> EXEC["Execute / 执行"]
+    EXEC --> COMPILE["Compile / Export<br/>编译/导出"]
+    COMPILE --> GATE["🚦 Format Guard Gate<br/>格式校验闸门<br/>format_guard.py"]
     
-    GATE -->|errors > 0| FIX["Fix & Rerun / 淇骞堕噸璺?]
+    GATE -->|errors > 0| FIX["Fix & Rerun / 修复并重跑"]
     FIX --> COMPILE
-    GATE -->|errors == 0| DONE["Pass / 闂搁棬閫氳繃 鉁?]
+    GATE -->|errors == 0| DONE["Pass / 闸门通过 ✅"]
     
-    subgraph Assets["Skill Assets / Skill 璧勪骇"]
+    subgraph Assets["Skill Assets / Skill 资产"]
         SCRIPTS["scripts/format_guard.py"]
         REFS["references/ (8 docs)"]
         EXS["examples/ (LaTeX CN/EN + Marp CN/EN)"]
@@ -101,176 +105,200 @@ flowchart TD
 
 <!-- readme-gen:end:architecture -->
 
-### Directory Structure / 鐩綍缁撴瀯
+### Directory Structure / 目录结构
 
 <!-- readme-gen:start:tree -->
 
 ```
-馃摝 acp-traetune-kerrigan-s-tex-marp-necklace
-鈹溾攢鈹€ 馃搫 SKILL.md                          # Skill definition body / Skill 瀹氫箟鏈綋
-鈹溾攢鈹€ 馃搨 scripts/
-鈹?  鈹斺攢鈹€ 馃摐 format_guard.py               # Format validation gate / 鏍煎紡鏍￠獙闂搁棬
-鈹溾攢鈹€ 馃搨 references/
-鈹?  鈹溾攢鈹€ 馃搫 latex-guide.md                # LaTeX from-scratch guide / LaTeX 浠庨浂鎾板啓鎸囧崡
-鈹?  鈹溾攢鈹€ 馃搫 latex-faq.md                  # LaTeX FAQ & repair / LaTeX 甯歌闂涓庝慨澶?鈹?  鈹溾攢鈹€ 馃搫 latex-capability-map.md       # LaTeX capability disclosure / LaTeX 鑳藉姏鎶湶閾?鈹?  鈹溾攢鈹€ 馃搫 marp-guide.md                 # Marp from-scratch guide / Marp 浠庨浂鎾板啓鎸囧崡
-鈹?  鈹溾攢鈹€ 馃搫 marp-faq.md                   # Marp FAQ & repair / Marp 甯歌闂涓庝慨澶?鈹?  鈹溾攢鈹€ 馃搫 marp-capability-map.md        # Marp capability disclosure / Marp 鑳藉姏鎶湶閾?鈹?  鈹溾攢鈹€ 馃搫 marp-reference.md             # Marp reference body / Marp 鏍稿績鍙傝€冩湰浣?鈹?  鈹溾攢鈹€ 馃搫 install-preflight.md          # Env preflight & install / 鐜棰勬涓庡畨瑁呯瓥鐣?鈹?  鈹溾攢鈹€ 馃搫 problem-capability-registry.md # Problem registry (28+ entries) / 闂鎬昏〃
-鈹?  鈹斺攢鈹€ 馃搨 latex-reference/
-鈹?      鈹溾攢鈹€ 馃摐 main_cn.tex               # Core LaTeX reference / LaTeX 鏍稿績鍙傝€?鈹?      鈹溾攢鈹€ 馃摐 long-practice-cn.tex      # Long-form practice / 闀跨▼瀹炶返
-鈹?      鈹斺攢鈹€ 馃摐 ac-report-cn.tex          # AC technical report / AC 鎶€鏈姤鍛?鈹溾攢鈹€ 馃搨 examples/
-鈹?  鈹溾攢鈹€ 馃搨 latex_min_cn/                 # Minimal LaTeX (Chinese) / LaTeX 涓枃鏈€灏忚寖渚?鈹?  鈹溾攢鈹€ 馃搨 latex_min_en/                 # Minimal LaTeX (English) / LaTeX 鑻辨枃鏈€灏忚寖渚?鈹?  鈹溾攢鈹€ 馃搫 marp_min_cn.md                # Minimal Marp (Chinese) / Marp 涓枃鏈€灏忚寖渚?鈹?  鈹斺攢鈹€ 馃搫 marp_min_en.md                # Minimal Marp (English) / Marp 鑻辨枃鏈€灏忚寖渚?鈹斺攢鈹€ 馃搨 evals/smoke/                      # Smoke tests / 鐑熼浘娴嬭瘯
+📦 acp-traetune-kerrigan-s-tex-marp-necklace
+├── 📄 SKILL.md                          # Skill definition body / Skill 定义本体
+├── 📂 scripts/
+│   └── 📜 format_guard.py               # Format validation gate / 格式校验闸门
+├── 📂 references/
+│   ├── 📄 latex-guide.md                # LaTeX from-scratch guide / LaTeX 从零撰写指南
+│   ├── 📄 latex-faq.md                  # LaTeX FAQ & repair / LaTeX 常见问题与修复
+│   ├── 📄 latex-capability-map.md       # LaTeX capability disclosure / LaTeX 能力披露链
+│   ├── 📄 marp-guide.md                 # Marp from-scratch guide / Marp 从零撰写指南
+│   ├── 📄 marp-faq.md                   # Marp FAQ & repair / Marp 常见问题与修复
+│   ├── 📄 marp-capability-map.md        # Marp capability disclosure / Marp 能力披露链
+│   ├── 📄 marp-reference.md             # Marp reference body / Marp 核心参考本体
+│   ├── 📄 install-preflight.md          # Env preflight & install / 环境预检与安装策略
+│   ├── 📄 problem-capability-registry.md # Problem registry (28+ entries) / 问题总表
+│   └── 📂 latex-reference/
+│       ├── 📜 main_cn.tex               # Core LaTeX reference / LaTeX 核心参考
+│       ├── 📜 long-practice-cn.tex      # Long-form practice / 长程实践
+│       └── 📜 ac-report-cn.tex          # AC technical report / AC 技术报告
+├── 📂 examples/
+│   ├── 📂 latex_min_cn/                 # Minimal LaTeX (Chinese) / LaTeX 中文最小范例
+│   ├── 📂 latex_min_en/                 # Minimal LaTeX (English) / LaTeX 英文最小范例
+│   ├── 📄 marp_min_cn.md                # Minimal Marp (Chinese) / Marp 中文最小范例
+│   └── 📄 marp_min_en.md                # Minimal Marp (English) / Marp 英文最小范例
+└── 📂 evals/smoke/                      # Smoke tests / 烟雾测试
 ```
 
 <!-- readme-gen:end:tree -->
 
 ---
 
-## Core Capabilities / 鏍稿績鑳藉姏
+## Core Capabilities / 核心能力
 
 <!-- readme-gen:start:features -->
 
-| 馃殌 Capability / 鑳藉姏 | 馃摑 Description / 鎻忚堪 |
+| 🚀 Capability / 能力 | 📝 Description / 描述 |
 |---|---|
-| 馃彈锔?**From-Scratch Authoring / 浠庨浂鎾板啓** | Build complete LaTeX papers or Marp slide decks with modular structure, preamble inheritance, and bilingual support. 妯″潡鍖栫粨鏋勩€佸瑷€缁ф壙銆佸弻璇敮鎸侊紝鐙珛浠庨浂鏋勭瓚 paper 鎴?PPT銆?|
-| 馃洜锔?**Incremental Modification / 澧為噺淇敼** | Safely modify existing documents with FAQ-guided diagnosis and format guard protection. 鍩轰簬 FAQ 寮曞璇婃柇涓庢牸寮忔姢鏍忥紝瀹夊叏淇敼宸叉湁鏂囨。銆?|
-| 馃敡 **Format Fault Repair / 鏍煎紡鏁呴殰淇** | Diagnose and fix 28+ registered problem types: overflow, misalignment, table width, TikZ overlap, legend intrusion, and more. 璇婃柇骞朵慨澶?28+ 娉ㄥ唽闂绫诲瀷锛氭孩鍑恒€佹湭灞呬腑銆佽〃鏍艰繃瀹姐€乀ikZ 閲嶅彔銆佸浘渚嬩镜鍏ョ瓑銆?|
-| 馃殾 **Format Guard Gate / 鏍煎紡鏍￠獙闂搁棬** | Automated validation via `format_guard.py` producing structured JSON evidence. Hard-blocks on errors, enforces warning review. 鑷姩鍖栨牎楠岋紝浜у嚭缁撴瀯鍖?JSON 璇佹嵁銆俥rror 纭樆鏂紝warning 寮哄埗瀹℃煡銆?|
-| 馃洝锔?**Independent Validation / 鐙珛鏍￠獙** | Use as a standalone validation capability for existing LaTeX/Marp documents 鈥?no full authoring pipeline required. 鍙嫭绔嬩綔涓烘牎楠岃兘鍔涙牎楠屽凡鏈?LaTeX/Marp 鏂囨。锛屾棤闇€瀹屾暣鎾板啓閾捐矾銆?|
-| 馃挕 **Best-Practice Repair / 鏈€浣冲疄璺典慨澶?* | Repair suggestions are derived from battle-tested reference bodies, not generic templates. 淇寤鸿鏉ヨ嚜瀹炴垬楠岃瘉鐨勫弬鑰冩湰浣擄紝闈炴硾鍖栨ā鏉裤€?|
-| 馃寪 **Bilingual / 鍙岃** | All reference materials, examples, and guard reports support Chinese and English. 鎵€鏈夊弬鑰冩潗鏂欍€佽寖渚嬨€佹牎楠屾姤鍛婂潎鏀寔涓嫳鍙岃銆?|
+| 🏗️ **From-Scratch Authoring / 从零撰写** | Build complete LaTeX papers or Marp slide decks with modular structure, preamble inheritance, and bilingual support. 模块化结构、导言继承、双语支持，独立从零构筑 paper 或 PPT。 |
+| 🛠️ **Incremental Modification / 增量修改** | Safely modify existing documents with FAQ-guided diagnosis and format guard protection. 基于 FAQ 引导诊断与格式护栏，安全修改已有文档。 |
+| 🔧 **Format Fault Repair / 格式故障修复** | Diagnose and fix 28+ registered problem types: overflow, misalignment, table width, TikZ overlap, legend intrusion, and more. 诊断并修复 28+ 注册问题类型：溢出、未居中、表格过宽、TikZ 重叠、图例侵入等。 |
+| 🚦 **Format Guard Gate / 格式校验闸门** | Automated validation via `format_guard.py` producing structured JSON evidence. Hard-blocks on errors, enforces warning review. 自动化校验，产出结构化 JSON 证据。error 硬阻断，warning 强制审查。 |
+| 🛡️ **Independent Validation / 独立校验** | Use as a standalone validation capability for existing LaTeX/Marp documents — no full authoring pipeline required. 可独立作为校验能力校验已有 LaTeX/Marp 文档，无需完整撰写链路。 |
+| 💡 **Best-Practice Repair / 最佳实践修复** | Repair suggestions are derived from battle-tested reference bodies, not generic templates. 修复建议来自实战验证的参考本体，非泛化模板。 |
+| 🌐 **Bilingual / 双语** | All reference materials, examples, and guard reports support Chinese and English. 所有参考材料、范例、校验报告均支持中英双语。 |
 
 <!-- readme-gen:end:features -->
 
 ---
 
-## Quick Start / 蹇€熷紑濮?
-### Prerequisites / 鍓嶇疆渚濊禆
+## Quick Start / 快速开始
+
+### Prerequisites / 前置依赖
 
 This Skill is designed to run within the **TRAE IDE** with the **AC Paradigm v6** component suite. For optimal performance, install the AC deployment components:
 
-姝?Skill 璁捐杩愯浜?**TRAE IDE** 涓紝閰嶅 **AC 鑼冨紡 v6** 缁勪欢浣跨敤銆備负鑾峰緱鏈€浣虫€ц兘锛岃瀹夎 AC 閮ㄧ讲缁勪欢锛?
-> **Recommended / 鎺ㄨ崘锛?* [AC-skill-deploy-ac-v6-components](https://github.com/jopsammy/AC-skill-deploy-ac-v6-components)
+此 Skill 设计运行于 **TRAE IDE** 中，配套 **AC 范式 v6** 组件使用。为获得最佳性能，请安装 AC 部署组件：
+
+> **Recommended / 推荐：** [AC-skill-deploy-ac-v6-components](https://github.com/jopsammy/AC-skill-deploy-ac-v6-components)
 >
-> 鈿狅笍 Running this Skill without the AC paradigm components may result in degraded performance 鈥?some guardrails (GN-004 review, EC-7 signal protocol, subagent scheduling matrix) depend on the AC rule infrastructure.
+> ⚠️ Running this Skill without the AC paradigm components may result in degraded performance — some guardrails (GN-004 review, EC-7 signal protocol, subagent scheduling matrix) depend on the AC rule infrastructure.
 >
-> 鈿狅笍 鑴辩 AC 鑼冨紡缁勪欢杩愯鏈?Skill 鍙兘瀵艰嚧鎬ц兘鎹熷け鈥斺€旈儴鍒嗘姢鏍忥紙GN-004 瀹℃煡銆丒C-7 淇″彿鍗忚銆乻ubagent 璋冨害鐭╅樀锛変緷璧?AC 瑙勫垯鍩虹璁炬柦銆?
-### Triggering the Skill / 瑙﹀彂 Skill
+> ⚠️ 脱离 AC 范式组件运行本 Skill 可能导致性能损失——部分护栏（GN-004 审查、EC-7 信号协议、subagent 调度矩阵）依赖 AC 规则基础设施。
+
+### Triggering the Skill / 触发 Skill
 
 The Skill auto-triggers when the user requests:
 
-姝?Skill 鍦ㄧ敤鎴疯姹備互涓嬪唴瀹规椂鑷姩瑙﹀彂锛?
+此 Skill 在用户请求以下内容时自动触发：
+
 - Creating or modifying LaTeX papers / technical reports
 - Creating or modifying Marp slide decks / presentations
 - Fixing format issues (overflow, misalignment, table width, etc.)
-- 鏂板缓/淇敼 LaTeX 璁烘枃/鎶€鏈姤鍛?- 鏂板缓/淇敼 Marp 骞荤伅鐗?婕旂ず鏂囩
-- 淇鏍煎紡闂锛堟孩鍑恒€佹湭灞呬腑銆佽〃鏍艰繃瀹界瓑锛?
-### Environment Setup / 鐜閰嶇疆
+- 新建/修改 LaTeX 论文/技术报告
+- 新建/修改 Marp 幻灯片/演示文稿
+- 修复格式问题（溢出、未居中、表格过宽等）
+
+### Environment Setup / 环境配置
 
 For from-scratch authoring, the Skill will guide you through environment preflight:
 
-浠庨浂鎾板啓鏃讹紝Skill 灏嗗紩瀵间綘瀹屾垚鐜棰勬锛?
-| Tool / 宸ュ叿 | Check / 妫€鏌?| Install / 瀹夎 |
+从零撰写时，Skill 将引导你完成环境预检：
+
+| Tool / 工具 | Check / 检查 | Install / 安装 |
 |---|---|---|
 | **Python 3.6+** | `python --version` | `winget install Python.Python.3.12` |
 | **XeLaTeX** | `xelatex --version` | `winget install MiKTeX.MiKTeX` |
-| **Biber** | `biber --version` | Bundled with MiKTeX / 闅?MiKTeX 鑷甫 |
+| **Biber** | `biber --version` | Bundled with MiKTeX / 随 MiKTeX 自带 |
 | **Node.js 18+** | `node --version` | `winget install OpenJS.NodeJS.LTS` |
 | **Marp CLI** | `marp --version` | `npm install -g @marp-team/marp-cli` |
 
 ---
 
-## The Boundary / 鑳藉姏杈圭晫
+## The Boundary / 能力边界
 
-> **This Skill operates at the lower bound of typesetting. / 鏈?Skill 宸ヤ綔鍦ㄦ帓鐗堝伐绋嬬殑涓嬮檺銆?*
+> **This Skill operates at the lower bound of typesetting. / 本 Skill 工作在排版工程的下限。**
 
 It is engineered with a philosophy of **maximal restraint**:
 
-瀹冧互**鏈€澶у厠鍒?*涓哄伐绋嬪摬瀛︼細
+它以**最大克制**为工程哲学：
 
-- **Minimalist color schemes / 鎬у喎娣￠閰嶈壊** 鈥?Neutral baselines (`#333` body / `#0366d6` accent / `#fff` background), WCAG AA 4.5:1 contrast. No brand color inheritance unless explicitly requested.
-- **Deconstructed typography / 瑙ｆ瀯鎺掔増涓嬮檺** 鈥?The minimum viable structure that is still correct and readable. No decorative elements.
-- **Most robust solutions / 鏈€鍏烽瞾妫掓€х殑鏂规** 鈥?Solutions that survive across compilers, renderers, and screen modes, not the prettiest one-off hacks.
+- **Minimalist color schemes / 性冷淡风配色** — Neutral baselines (`#333` body / `#0366d6` accent / `#fff` background), WCAG AA 4.5:1 contrast. No brand color inheritance unless explicitly requested.
+- **Deconstructed typography / 解构排版下限** — The minimum viable structure that is still correct and readable. No decorative elements.
+- **Most robust solutions / 最具鲁棒性的方案** — Solutions that survive across compilers, renderers, and screen modes, not the prettiest one-off hacks.
 
-**Core Purpose / 鏍稿績鐩殑锛?* Free the "driver" from attention drain on typesetting details during necessary outward expression. You focus on content; the necklace handles the rest.
+**Core Purpose / 核心目的：** Free the "driver" from attention drain on typesetting details during necessary outward expression. You focus on content; the necklace handles the rest.
 
-璁?椹鹃┒鍛?鍦ㄥ繀瑕佺殑瀵瑰琛ㄨ揪鏃讹紝鍏嶉櫎鎺掔増鐩稿叧闂鐨勬敞鎰忓姏鍒嗘暎銆備綘涓撴敞鍐呭锛岄」閾惧鐞嗗叾浣欍€?
-### When You Need More / 褰撲綘闇€瑕佹洿澶?
-> If you have **high artistic requirements** 鈥?custom branded themes, elaborate visual design, publication-grade typographic polish 鈥?this Skill serves only as a **structural lower bound**. You will still need advanced artistic / design support on top of it.
+让"驾驶员"在必要的对外表达时，免除排版相关问题的注意力分散。你专注内容，项链处理其余。
+
+### When You Need More / 当你需要更多
+
+> If you have **high artistic requirements** — custom branded themes, elaborate visual design, publication-grade typographic polish — this Skill serves only as a **structural lower bound**. You will still need advanced artistic / design support on top of it.
 >
-> 濡傛灉浣犳湁**鏋侀珮缇庢湳瑕佹眰**鈥斺€斿畾鍒跺搧鐗屼富棰樸€佺簿缁嗚瑙夎璁°€佸嚭鐗堢骇鎺掔増娑﹁壊鈥斺€旀湰 Skill 浠呰兘浣滀负**缁撴瀯涓嬮檺**浣跨敤锛屼粛鐒堕渶瑕侀珮绾х編鏈?璁捐杩涜淇グ鏀寔銆?
+> 如果你有**极高美术要求**——定制品牌主题、精细视觉设计、出版级排版润色——本 Skill 仅能作为**结构下限**使用，仍然需要高级美术/设计进行修饰支持。
+
 ---
 
-## Format Guard Gate / 鏍煎紡鏍￠獙闂搁棬
+## Format Guard Gate / 格式校验闸门
 
-The `format_guard.py` script is the Skill's **hard gate** 鈥?no document passes without it. It produces:
+The `format_guard.py` script is the Skill's **hard gate** — no document passes without it. It produces:
 
-`format_guard.py` 鏄湰 Skill 鐨?*纭椄闂?*鈥斺€斾换浣曟枃妗ｄ笉缁忓叾鏍￠獙涓嶅緱鏀捐銆備骇鍑猴細
+`format_guard.py` 是本 Skill 的**硬闸门**——任何文档不经其校验不得放行。产出：
 
-| Output / 浜у嚭 | Format / 鏍煎紡 | Purpose / 鐢ㄩ€?|
+| Output / 产出 | Format / 格式 | Purpose / 用途 |
 |---|---|---|
-| `<prefix>.json` | Machine-readable / 鏈哄櫒鍙 | Structured evidence: `files[].messages[]` + `overall.{errors,warnings,files_scanned}` |
-| `<prefix>.md` | Human-readable / 浜虹被鍙 | Markdown table report / Markdown 琛ㄦ牸鎶ュ憡 |
+| `<prefix>.json` | Machine-readable / 机器可读 | Structured evidence: `files[].messages[]` + `overall.{errors,warnings,files_scanned}` |
+| `<prefix>.md` | Human-readable / 人类可读 | Markdown table report / Markdown 表格报告 |
 
-**Gate Logic / 闂搁棬閫昏緫锛?*
+**Gate Logic / 闸门逻辑：**
 
 ```
-Compile 鈫?format_guard.py 鈫?Read JSON 鈫?errors > 0?
-  鈹溾攢鈹€ YES 鈫?Fix each error 鈫?Recompile 鈫?Back to gate
-  鈹斺攢鈹€ NO  鈫?Review all warnings against compile log
-              鈹溾攢鈹€ Unacceptable 鈫?Fix 鈫?Recompile
-              鈹斺攢鈹€ All acceptable 鈫?PASS 鉁?```
+Compile → format_guard.py → Read JSON → errors > 0?
+  ├── YES → Fix each error → Recompile → Back to gate
+  └── NO  → Review all warnings against compile log
+              ├── Unacceptable → Fix → Recompile
+              └── All acceptable → PASS ✅
+```
 
-**Coverage / 瑕嗙洊鑼冨洿锛?*
+**Coverage / 覆盖范围：**
 
-| Category / 绫诲埆 | Count / 鏁伴噺 |
+| Category / 类别 | Count / 数量 |
 |---|---|
-| LaTeX error codes / LaTeX 閿欒鐮?| 17 (TEX001鈥揟EX017) |
-| Marp error codes / Marp 閿欒鐮?| 14 (MARP001鈥揗ARP014) |
+| LaTeX error codes / LaTeX 错误码 | 17 (TEX001–TEX017) |
+| Marp error codes / Marp 错误码 | 14 (MARP001–MARP014) |
 
 ---
 
-## AC Paradigm Integration / AC 鑼冨紡闆嗘垚
+## AC Paradigm Integration / AC 范式集成
 
 <!-- readme-gen:start:ac-integration -->
 
 This Skill is a first-class citizen of the **AC Paradigm v6** ecosystem:
 
-鏈?Skill 鏄?**AC 鑼冨紡 v6** 鐢熸€佺殑涓€绛夊叕姘戯細
+本 Skill 是 **AC 范式 v6** 生态的一等公民：
 
-| Integration Point / 闆嗘垚鐐?| Description / 鎻忚堪 |
+| Integration Point / 集成点 | Description / 描述 |
 |---|---|
-| **EC-7 Signal Protocol** | Skill routes value judgments through L3 AskUserQuestion, content decisions never auto-resolved. 浠峰€煎垽鏂蛋 L3 AskUserQuestion锛屽唴瀹瑰喅绛栨案涓嶈嚜鍔ㄨ鍐炽€?|
-| **GN-004 Review** | TikZ diagram necessity assessment triggers independent GN-004 review before implementation. TikZ 鍥惧繀瑕佹€ц瘎浼拌Е鍙?GN-004 鐙珛瀹℃煡銆?|
-| **Subagent Parallel Strategy** | LaTeX + Marp dual-path documents can be parallel-dispatched via `parallel-sub-agent`. LaTeX + Marp 鍙岃矾绾挎枃妗ｅ彲骞惰璋冨害銆?|
-| **Anchor Document System** | Skill writes outlines/notes to anchor files before NotifyUser, ensuring cross-session continuity. 鍏堝啓澶х翰/note 鍒伴敋鐐规枃浠讹紝鍐嶉€氱煡浜虹被锛屼繚璇佽法鏂潰杩炵画鎬с€?|
-| **Three-State Closure** | All Skill execution results marked as 宸查棴鍚?鏈棴鍚?褰撳墠涓嶅彲鍒ゅ畾 鈥?never downgraded to binary. 鎵€鏈夋墽琛岀粨鏋滀笁鍊肩姸鎬佹爣璁帮紝涓嶉檷绾т负浜屽€笺€?|
+| **EC-7 Signal Protocol** | Skill routes value judgments through L3 AskUserQuestion, content decisions never auto-resolved. 价值判断走 L3 AskUserQuestion，内容决策永不自动裁决。 |
+| **GN-004 Review** | TikZ diagram necessity assessment triggers independent GN-004 review before implementation. TikZ 图必要性评估触发 GN-004 独立审查。 |
+| **Subagent Parallel Strategy** | LaTeX + Marp dual-path documents can be parallel-dispatched via `parallel-sub-agent`. LaTeX + Marp 双路线文档可并行调度。 |
+| **Anchor Document System** | Skill writes outlines/notes to anchor files before NotifyUser, ensuring cross-session continuity. 先写大纲/note 到锚点文件，再通知人类，保证跨断面连续性。 |
+| **Three-State Closure** | All Skill execution results marked as 已闭合/未闭合/当前不可判定 — never downgraded to binary. 所有执行结果三值状态标记，不降级为二值。 |
 
 <!-- readme-gen:end:ac-integration -->
 
 ---
 
 <!-- readme-gen:start:health -->
-## Repo Health Scorecard / 浠ｇ爜搴撳仴搴峰害
+## Repo Health Scorecard / 代码库健康度
 
-| Dimension / 缁村害 | Score / 璇勫垎 | Status / 鐘舵€?|
+| Dimension / 维度 | Score / 评分 | Status / 状态 |
 |---|---|---|
-| **Tests / 娴嬭瘯** | `鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅` 100/100 | 鉁?Passed |
-| **CI/CD / 鎸佺画闆嗘垚** | `鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅` 100/100 | 鉁?Passed |
-| **Type Safety / 绫诲瀷瀹夊叏** | `鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅` 100/100 | 鉁?Passed |
-| **Documentation / 鏂囨。**| `鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅` 100/100 | 鉁?Passed |
-| **Coverage / 瑕嗙洊鐜?* | `鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅` 100/100 | 鉁?Passed |
+| **Tests / 测试** | `████████████████████` 100/100 | ✅ Passed |
+| **CI/CD / 持续集成** | `████████████████████` 100/100 | ✅ Passed |
+| **Type Safety / 类型安全** | `████████████████████` 100/100 | ✅ Passed |
+| **Documentation / 文档**| `████████████████████` 100/100 | ✅ Passed |
+| **Coverage / 覆盖率** | `████████████████████` 100/100 | ✅ Passed |
 
 <!-- readme-gen:end:health -->
 
 ---
 
-## Contributing / 鍙備笌璐＄尞
+## Contributing / 参与贡献
 
 See [CONTRIBUTING.md](.trae/skills/acp-traetune-kerrigan-s-tex-marp-necklace/CONTRIBUTING.md) for guidelines on how to extend the problem registry, add smoke tests, or improve format guard checks.
 
-璇峰弬闃?[CONTRIBUTING.md](.trae/skills/acp-traetune-kerrigan-s-tex-marp-necklace/CONTRIBUTING.md) 浜嗚В濡備綍鎵╁睍闂娉ㄥ唽琛ㄣ€佹坊鍔犵儫闆炬祴璇曘€佹垨鏀硅繘鏍煎紡鏍￠獙妫€鏌ラ」銆?
+请参阅 [CONTRIBUTING.md](.trae/skills/acp-traetune-kerrigan-s-tex-marp-necklace/CONTRIBUTING.md) 了解如何扩展问题注册表、添加烟雾测试、或改进格式校验检查项。
+
 ---
 
-## License / 璁稿彲
+## License / 许可
 
 MIT
 
@@ -282,9 +310,9 @@ MIT
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3&height=100&section=footer" width="100%" alt="Footer Wave" />
 
-*Built for the AC Paradigm v6 ecosystem. / 涓?AC 鑼冨紡 v6 鐢熸€佹瀯寤恒€?
+*Built for the AC Paradigm v6 ecosystem. / 为 AC 范式 v6 生态构建。*
 
-*The necklace is yours. Wear it well. / 椤归摼鏄綘鐨勩€傚ソ濂芥埓鐫€銆?
+*The necklace is yours. Wear it well. / 项链是你的。好好戴着。*
 
 </div>
 
