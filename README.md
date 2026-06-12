@@ -2,7 +2,7 @@
 <div align="center">
 
 <!-- readme-gen:start:hero -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3&height=250&text=Kerrigan's%20Necklace&fontSize=60&fontAlignY=35&desc=General-Purpose%20LaTeX%20%26%20Marp%20Typesetting%20Carrier&descAlignY=55&fontColor=ffffff" width="100%" alt="Hero Image" />
+![Hero Image](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3&height=250&text=Kerrigan%27s%20Necklace&fontSize=60&fontAlignY=35&desc=General-Purpose%20LaTeX%20%26%20Marp%20Typesetting%20Carrier&descAlignY=55&fontColor=ffffff)
 <!-- readme-gen:end:hero -->
 
 # Kerrigan's TeX-Marp Necklace / 凯瑞甘的 TeX-Marp 项链
